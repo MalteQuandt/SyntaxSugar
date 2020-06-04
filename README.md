@@ -5,7 +5,7 @@
 - [Syntactic sugar in Java](#syntactic-sugar-in-java)
   * [1. Table of Content:](#1-table-of-content-)
   * [2. Introduction:](#2-introduction-)
-  * [3.  At the beginning of time: 1970:](#3--at-the-beginning-of-time--1970)
+  * [3.  At the beginning of time: 1970:](#3-at-the-beginning-of-time-1970)
   * [4. Examples in other programming languages:](#4-examples-in-other-programming-languages)
   * [5. Wrapper assignment:](#5-wrapper-assignment)
   * [6. Static-Block](#6-static-block)
