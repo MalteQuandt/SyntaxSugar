@@ -1,12 +1,13 @@
 ## Syntactic sugar in Java
 
 ### 1. Table of Content: 
+
 - [Syntactic sugar in Java](#syntactic-sugar-in-java)
   * [1. Table of Content:](#1-table-of-content-)
   * [2. Introduction:](#2-introduction-)
-  * [3.  At the beginning of time: 1970:](#3--at-the-beginning-of-time--1970-)
-  * [4. Examples in other programming languages:](#4-examples-in-other-programming-languages-)
-  * [5. Wrapper assignment:](#5-wrapper-assignment-)
+  * [3.  At the beginning of time: 1970:](#3--at-the-beginning-of-time--1970)
+  * [4. Examples in other programming languages:](#4-examples-in-other-programming-languages)
+  * [5. Wrapper assignment:](#5-wrapper-assignment)
   * [6. Static-Block](#6-static-block)
   * [7. For-Each-Loop:](#7-for-each-loop-)
   * [8. Arbitrary Number of Arguments:](#8-arbitrary-number-of-arguments-)
@@ -37,7 +38,7 @@ As alluded to before, syntactic sugar is not something that only exists in java,
    But this is just syntactic sugar for the global method call in the lower level language this object-oriented language is written in. That call would look something like this:
 
    `method(object, value1, value2, value3);`
-   
+
 4. **The ternary operator:** The ternary operator is the only operator of any language with c-like syntax which takes in three expressions as its operands. It is a simple way to write a branching statement as an expression. Let a, b and c be integers. Then the statement `if(b >= a) { c = b } else { c = a } `  is functionally equivalent to the statement`c = (b >= a ? b : a)` The only difference is that the first example is a statement and the second one is an expression, which means that you can bind the ternary operator in other expressions or terms which is very powerful.
 
 5. **Accessing members from a pointer**: Assume a struct `struct`with the member `member`, and a pointer `ptr`that references that struct. Now, you could use pointer arithmetic to reference that pointer by writing *(ptr).member, but it is way more easy to just write ptr->member. The compiler does not care anyways, as it will most likely be compiled the same way anyways.
@@ -119,6 +120,7 @@ for(int iterator = 0; iterator <= list.size();iterator++) {
 Now, there is not really a difference when you work with objects. But when you try to use this loop to change the values of an array filled with primitive types, or tried to assign a new value to the object variable in the for-each example, you will find, that no change has been done. This is for the simple reason that the for each loop does not give you the actual object you are working on, but rather a reference (**Remember:** Java is pass by value, not pass by reference). This has the effect that you can work with the values a those positions, but if you were to try to assign a new value you would only assign a new value to the reference to the point in the list, not the actual point itself.
 
 So you should only use this if you want to work on objects or if you just use the values for some kind of computation, not if you want to change the value of some variables in the list.
+
 ### 8. Arbitrary Number of Arguments:
 
 Assume a method with the signature `int sum(Integer ... integers);`On first glance, it is pretty obvious what this is supposed to do: It should allow the client which uses the method to put in an arbitrary number of arguments. A short example, using the method from the above, but this time i will implement it at the beginning.
@@ -259,6 +261,7 @@ MyInterface interfaceImplementaion = () -> System.out.println("This is the imple
 Using the lambda feature we could break a fairly difficult to understand block of code easy to read and write.
 
 As a last example, only to show how efficient lambda expressions can be, lets look at the code from an actionlistener:
+
 ````java
 button.addActionListener(new ActionListener() {
 	@Override
@@ -272,7 +275,9 @@ button.addActionListener(event -> {
 //Do something!
 });
 ````
+
 Pretty cool that you can break this thing down to such a small line of code, right?
+
 ### 11. Double brace initialization:
 
 Double brace initialization is a feature introduced by the java language in order to make passing a list as an argument easier.
@@ -341,6 +346,7 @@ reduce(Math::max);
 ````
 
 ### 13. Conclusion
+
 Those were the more interesting kinds of syntactic sugars in the language. But this does not mean that the other ones are not important at all, quite the opposite! The more popular and well known kinds of syntax sugars are so well known **because** they are so useful. There are reasons why the C language is still used today, and why the syntax of C-like languages is used so often, it is just so easy to use, and useful! I have already counted a few of the best syntax sugars that came to my head in the beginning, but there are many more, maybe even equally useful ones, but i just had to pick some to use and i picked my favorite and the ones i considered to be the most useful.
 There are more kinds of syntactic sugars in the java programming language than i care to look up, but i think i have talked about the main ones, and brought this topic to your attention. This is the end of the article, and what you will do with that knowledge is up to you. You can just go about your normal day and forget about all the not's and crannies and all the uniqueness of the java language, or you could switch the tab and open up a browser and start your own research into this (in my opinion) very interesting topic. But however you may decide, i would really like it if you were to give me feedback in any way you can, i am open to critique. This is my first toe dip into the world of scientific journalism, so i hope to hear some good constructive critic. 
 
@@ -360,4 +366,3 @@ There are more kinds of syntactic sugars in the java programming language than i
 12. [Research about Lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus)
 13. [Double colon and what it means](https://stackoverflow.com/questions/27015495/meaning-of-in-java-syntax?noredirect=1&lq=1)
 14. [Double colon and the math class.](https://stackoverflow.com/questions/20001427/double-colon-operator-in-java-8?noredirect=1&lq=1)
-
