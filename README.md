@@ -43,14 +43,26 @@ As alluded to before, syntactic sugar is not something that only exists in java,
 
 5. **Accessing members from a pointer**: Assume a struct `struct`with the member `member`, and a pointer `ptr`that references that struct. Now, you could use pointer arithmetic to reference that pointer by writing *(ptr).member, but it is way more easy to just write ptr->member. The compiler does not care anyways, as it will most likely be compiled the same way anyways.
 
-6. **Honorable Mentions:**  Most of those can be summarized under the mantle of "Syntax of C-like programming languages" which is true, a lot of these sugars have been around since the c programming language was first released by Kernighan and Ritchie in 1972.
+6. **Type inference**: The C# programming language (And also Java since Java 10) gives the user the ability of type inference, which has this syntax: `var identifier = value;`, which allows the compiler to automatically detect the data type of the value and set the type of that variable during compilation time. C++ also has this since C++11 using the `auto` modifier.
+
+7. **Honorable Mentions:**  Most of those can be summarized under the mantle of "Syntax of C-like programming languages" which is true, a lot of these sugars have been around since the c programming language was first released by Kernighan and Ritchie in 1972.
    A few honorable mentions for me would be the goes-to loop in c-like languages: Let **x** be a positive integer and **b** be a positive integer smaller than x, then the loop `for(;x-->b;) {//do something}` which makes x iterate down until x is equal to b.
 
 Those were a few examples from other programming languages. But now that we are warmed up and are hopefully aware what syntactic sugars are and are able to spot them, let us go into the actual topic of this article: Syntactic sugars in the *Java* Programming language.
 
 In java, ["Syntactic sugar is a mean which allows Java to provide new syntax without implementing that on JVM level. The syntactic syntax is converted into another more general or low level construct by the compiler wich can be understood be JVM."]([https://www.logicbig.com/how-to/software-engineering/syntactic-sugar.html#:~:text=Syntactic%20sugar%20is%20a%20mean,can%20be%20understood%20by%20JVM.](https://www.logicbig.com/how-to/software-engineering/syntactic-sugar.html#:~:text=Syntactic sugar is a mean,can be understood by JVM.))
 
-Now, what does that mean exactly? 
+Now, what does that mean exactly?  Well, first we need to look at how the JVM (Java virtual machine) compiles and interprets the code we feed it. It is a bit unique in that java code is **both** compiled and interpreted. First, it is run through the compiler and is converted into so called bytecode. This is the step that the java language is implementing syntax sugar in. Afterwards, this bytecode in being fed into the JVM, a virtual machine which java is famous for, as you can use it to run your code independent from your platform! This is the step the java devs don't want to implement sugar in. As a simple example:
+
+```` java
+a += b;
+
+// and
+
+a = a + b;
+````
+
+Would both be compiled to the same byte code, and that is the point of syntax sugar. To break things that would be difficult to write down easier by implementing new syntax for the compiler to understand and convert, not by adding new things the virtual machine (And therefore your computer) can do.
 
 ### 5. Wrapper assignment:
 
