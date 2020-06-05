@@ -98,13 +98,13 @@ This creates a new wrapper and assigns it to the object variable *value*. But in
 This is a very simple feature: It is a block that is declared like so: `static{}` in which every field or method that is declared is handled as if it has the modifier *static* in front of it. This is useful if you have know that you want to access all the methods or fields in a specific class in a static context, which is sometimes the case ( Even if it is not really a best practice per-se) .
 A small but simple example could look like this:
 
-```` jave
+```` java
 static {
-int a;
-int b;
-int add() {
-return a + b;		
-}
+	int a;
+	int b;
+	int add() {
+		return a + b;		
+	}
 }
 ````
 
@@ -124,7 +124,7 @@ for(Object object : list) {
 This functionally nearly equivalent to:
 
 ````java
-for(int iterator = 0; iterator <= list.size();iterator++) {
+for(int i = 0; i <= list.size();i++) {
     //Do something
 }
 ````
@@ -138,12 +138,12 @@ So you should only use this if you want to work on objects or if you just use th
 Assume a method with the signature `int sum(Integer ... integers);`On first glance, it is pretty obvious what this is supposed to do: It should allow the client which uses the method to put in an arbitrary number of arguments. A short example, using the method from the above, but this time i will implement it at the beginning.
 
 ````java
-abstract int sum(Integer ... integers) {
+int sum(Integer ... integers) {
     int sum = 0;
     // Usage of the for-each loop!
     for(Integer summand : integer) {
         // Again, syntactic sugar to make this method a bit shorter than it would otherwise have been, and a lot more readable!
-        sum += summan;
+        sum += summand;
     }
     return int;
 }
