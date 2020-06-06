@@ -374,7 +374,7 @@ There are more kinds of syntactic sugars in the java programming language than i
 8. [Wikipedia Article of the C Programming language](https://en.wikipedia.org/wiki/C_(programming_language))
 9. [Why Dobule-Brace initialization are considered an anti pattern](https://blog.jooq.org/2014/12/08/dont-be-clever-the-double-curly-braces-anti-pattern/)
 10. [10 Best Practices when coding in Java](https://blog.jooq.org/2013/08/20/10-subtle-best-practices-when-coding-java/)
-11. [What are functional interfaces?]([http://tutorials.jenkov.com/java-functional-programming/functional-interfaces.html#:~:text=A%20functional%20interface%20in%20Java,to%20the%20single%20unimplemented%20method.](http://tutorials.jenkov.com/java-functional-programming/functional-interfaces.html#:~:text=A functional interface in Java,to the single unimplemented method.))
+11. [What are functional interfaces?](http://tutorials.jenkov.com/java-functional-programming/functional-interfaces.html#:~:text=A%20functional%20interface%20in%20Java,to%20the%20single%20unimplemented%20method.http://tutorials.jenkov.com/java-functional-programming/functional-interfaces.html#:~:text=A functional interface in Java,to the single unimplemented method.
 12. [Research about Lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus)
 13. [Double colon and what it means](https://stackoverflow.com/questions/27015495/meaning-of-in-java-syntax?noredirect=1&lq=1)
 14. [Double colon and the math class.](https://stackoverflow.com/questions/20001427/double-colon-operator-in-java-8?noredirect=1&lq=1)
