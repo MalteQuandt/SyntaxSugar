@@ -41,7 +41,7 @@ As alluded to before, syntactic sugar is not something that only exists in java,
 
 4. **The ternary operator:** The ternary operator is the only operator of any language with c-like syntax which takes in three expressions as its operands. It is a simple way to write a branching statement as an expression. Let a, b and c be integers. Then the statement `if(b >= a) { c = b } else { c = a } `  is functionally equivalent to the statement`c = (b >= a ? b : a)` The only difference is that the first example is a statement and the second one is an expression, which means that you can bind the ternary operator in other expressions or terms which is very powerful.
 
-5. **Accessing members from a pointer**: Assume a struct `struct`with the member `member`, and a pointer `ptr`that references that struct. Now, you could use pointer arithmetic to reference that pointer by writing *(ptr).member, but it is way more easy to just write ptr->member. The compiler does not care anyways, as it will most likely be compiled the same way anyways.
+5. **Accessing members from a pointer**: Assume a struct `struct`with the member `member`, and a pointer `ptr`that references that struct. Now, you could use pointer arithmetic to reference that pointer by writing *(ptr).member, but it is way more easy to just write ptr->member. The compiler does not care, as it will most likely be compiled the same way.
 
 6. **Type inference**: The C# programming language (And also Java since Java 10) gives the user the ability of type inference, which has this syntax: `var identifier = value;`, which allows the compiler to automatically detect the data type of the value and set the type of that variable during compilation time. C++ also has this since C++11 using the `auto` modifier.
 
@@ -141,7 +141,7 @@ Assume a method with the signature `int sum(Integer ... integers);`On first glan
 int sum(Integer ... integers) {
     int sum = 0;
     // Usage of the for-each loop!
-    for(Integer summand : integer) {
+    for(Integer summand : integers) {
         // Again, syntactic sugar to make this method a bit shorter than it would otherwise have been, and a lot more readable!
         sum += summand;
     }
@@ -173,7 +173,7 @@ public static void main(String[] args) {
 }
 ````
 
-Things to note: The argument that gets passed to the function will ** always** be an array, so treat it that way. It is not a collection or a list, but an array of the type you specify, be it object or primitive. 
+Things to note: The argument that gets passed to the function will **always** be an array, so treat it that way. It is not a collection or a list, but an array of the type you specify, be it object or primitive. 
 The syntax for this notation is: `Type ... arrayIdentifer` where the type is the type of the elements in the array.
 
 Something else to note is that you can use this with other formal parameters too. A short example:
@@ -184,7 +184,7 @@ abstract void method(float fPar1, double dPar2, char ... characters);
 
 If you use it in combination with other parameters remember that the arbitrary number of argument sugar must stand at the end of the method as the very last formal parameter.
 
-One las thing though, you should probably avoid using this in combination with generic types like in this example `void exampleMethod(T ... genreics);`If you do this, you will never be able to safely overload this method anymore. Lets look at an example:
+One las thing though, you should probably avoid using this in combination with generic types like in this example `void exampleMethod(T ... genrics);`If you do this, you will never be able to safely overload this method anymore. Lets look at an example:
 
 ````java
 void method(T... examples);
